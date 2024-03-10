@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+## About the project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#### Tools used
 
-## Available Scripts
+- React
+- Tailwind
+- Shadcn/ui
 
-In the project directory, you can run:
+Both **tailwind** and **shadcn/ui** components were used for convenience and time saving
 
-### `npm start`
+#### Observations
 
-Runs the app in the development mode.\
+###### What I did and what was left
+
+- Navigation
+
+  - My `previous` and `next` buttons allow switching between already searched for pokemon and the `next` button, gets the next one by ID if you're on the last one
+
+- Search
+
+  - Displays error if didn't find pokemon
+  - Doesn't allow searching by partial name
+    - At first glance the API didn't look like it supported this natively so I just left it out
+  - Displays name and sprite if found
+    - I started trying to build an actual pokemon card with the data but it would take too long so I scratched it
+
+- Didn't implement any tests
+
+- Caching
+  - This is was probably the most important one but I did leave it for last so I ended up running out of time. I do keep found pokemon in store, the only thing left would be to, before querying the API, check if any of the local pokemon have that name and move the sliding window to that index if so, query otherwise.
+
+###### We'll get 'em next time
+
+- I tried keeping the time spent around the 2-4h duration mentioned, which made it so I couldn't do or fix everything I wanted but was aware of and knew how to.
+- Cache-wise, I looked at React's Context which seemed like the proper way of doing this in a _real_ app but my first iteration would always be using the store I already had.
+- I'm saving way to much data per pokemon, +90% wasted memory.
+- The `previous` button doesn't do the same logic as the `next` but backwards.
+- I clearly didn't catch them all since there was a bug where sometimes the url for the image would break but I wasn't sure why so I couldn't reproduce to fix it.
+
+Hopefully this all makes sense and I didn't forget anything.
+Excuse the shameless self horn tooting but I know I'm capable of much more given the chance, even more so if inserted in a context with people I can learn from. Regardless, I appreciate the opportunity. **Thank you!**
+
+# Running the app
+
+Install dependencies
+
+##### `npm install`
+
+Start dev server
+
+##### `npm run start`
+
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

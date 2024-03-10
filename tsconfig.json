@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "jsx": "react" /* Specify JSX code generation: 'preserve', 'react-native', or 'react', 'react-jsx'. */,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*"]
+    }
+  }
+}

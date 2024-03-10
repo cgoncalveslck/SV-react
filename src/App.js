@@ -1,23 +1,19 @@
-import logo from './logo.svg';
+import * as React from 'react'
 import './App.css';
+import Layout from './pages/Layout.tsx'
+import { Toaster } from "../src/components/ui/toaster.tsx"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="dark">
+      <div className='poke-bg'>
+        <div className='bg-background test-bg'>
+          <div className="App-wrapper">
+            <Layout />
+          </div>
+        </div>
+      </div>
+      <Toaster />
     </div>
   );
 }
